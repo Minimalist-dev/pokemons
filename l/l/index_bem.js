@@ -215,8 +215,10 @@ class Pokemon {
         
         if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             footer.style.display = "block";
+            pokemons.style.flexDirection = "column";
         } else {
             footer.style.display = "none";
+            pokemons.style.flexDirection = "unset";
         }
     }
 }
