@@ -35,6 +35,7 @@ index.html
   - static colocar() {}
     - El metodo COLOCAR se utiliza para solicitar los Pokemons, y retutilizado para autocargar mas según el comportamiento del (scroll). Este metodo esta separado del motodo BUSCAR debido a la falta de cosistencia y relaciones, además de estrategia para una SPA "progresiva o con margen de crecimiento y mejora", incluido la reutilización de codigo. 
   - static obtener() {}
+    - El metodo OBTENER es para pintar los datos en la vista o interfaz, además de ser reutilizado para el autocargado según el (scroll) y la funcionaliza de busqueda.
   - static salida() {}
   - static subTipos() {}
   - static detalles() {}
