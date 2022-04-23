@@ -37,6 +37,7 @@ index.html
   - static obtener() {}
     - El metodo OBTENER es para pintar los datos en la vista o interfaz, además de ser reutilizado para el autocargado según el (scroll) y la funcionaliza de busqueda.
   - static salida() {}
+    - El metod SALIDA se utiliza en conjunto al de OBTENER, pero en este caso se utiliza para controlar o regular las diferentes resultados arrojados por la API, en la solicitud predeterminada, autocargado según el (scroll) y los resultados de busqueda.
   - static subTipos() {}
   - static detalles() {}
   - static detallar() {}
