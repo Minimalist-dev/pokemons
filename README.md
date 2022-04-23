@@ -1,6 +1,6 @@
 # Pokemons
 
-[Esta es una imagen](/../master/i_iconos/logo.png)
+![Esta es una imagen](/../master/i_iconos/logo.png)
 
 ## Ficheros
 Las carpetas que inician con la letra "i" se refieren a la parte de la vista (interfaz) de la SPA. la carpeta "i_css" contiene los archivos de estilo (.css), mientras que la carpeta "i_iconos" contiene los iconos utilizados para visualizar el logo, decoral y adaptar el diseño a la tematica de la SPA.
