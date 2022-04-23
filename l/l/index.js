@@ -1,18 +1,14 @@
-let _salida, _obtener, _buscar, menos;  
+let _salida, _obtener, _buscar;  
 
-let logo        = document.querySelector("#logo");
 let pokemons    = document.querySelector("#pokemons");
-let raza        = document.querySelector("#raza");
-let subRazas    = document.querySelector("#sub-razas");
 let _detalles   = document.querySelector("#detalles");
 let buscar      = document.querySelector("#buscar");
 let busqueda    = document.querySelector("#busqueda");
 let res         = document.querySelector("#res");
-let mas         = document.querySelector("#mas");
 
-const NUEVE = 9;
-const MAS = 1;
-let nueveMas = NUEVE;
+const NUEVE     = 9;
+const MAS       = 1;
+let nueveMas    = NUEVE;
 
 class Pokemon { 
     constructor() {
@@ -23,22 +19,13 @@ class Pokemon {
         detonador.style.display === "block" ? detonador.style.display = "none" : detonador.style.display = "block";        
     }
     static
-    colocar(limite) { //console.log(limite);
+    colocar(limite) {
         fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limite}&offset=0`).then(function(response) {
             if(response.ok) { return response.json(); } 
             else { throw 'Error de URL o respuesta.'; }
         }).then(function(json) {
             const objeto = json;
             Pokemon.obtener(objeto);
-//            _salida = "";
-//
-//            for(let i in objeto.results) {
-//                let id = objeto.results[i].url.split("/");
-//
-//                Pokemon.obtener(id, objeto.results[i]);
-//            }
-//            
-//            Pokemon.salida();
         }).catch(function (error) {
             console.log('Error de captura: ' + error.message);
         });
@@ -48,28 +35,28 @@ class Pokemon {
         _salida = "";
 
         for(let i in objeto.results) {
-//            setTimeout(function () {
-                let id = objeto.results[i].url.split("/");
-            
-                _salida += `
-                    <div class='pokemon'>
-                        <div>
-                            <img id='foto${id[6]}' />
-                            <h2>${objeto.results[i].name}</h2>
-                            <button onclick='Pokemon.detalles(${id[6]})'>Detalles</h2>
-                        </div>
-                        <div>
-                            <h3>Sub tipos</h3>
-                            <ol id='subtipo${id[6]}'>
+            let id = objeto.results[i].url.split("/");
 
-                            </ol>
-                            <p>#${id[6]}</p>
-                        </div>
+            _salida += `
+                <div class='pokemon'>
+                    <div>
+                        <img id='foto${id[6]}' />
+                        <h2>${objeto.results[i].name}</h2>
+                        <button onclick='Pokemon.detalles(${id[6]})'>
+                            <!--img src="i_iconos/info.png" alt="Submit"--> Detalles
+                        </button>
                     </div>
-                `;
+                    <div>
+                        <h3>Sub tipos</h3>
+                        <ol id='subtipo${id[6]}'>
 
-                Pokemon.subTipos(id[6]);
-//            }, 200);
+                        </ol>
+                        <p>#${id[6]}</p>
+                    </div>
+                </div>
+            `;
+
+            Pokemon.subTipos(id[6]);
         }
         
         Pokemon.salida();
@@ -100,7 +87,6 @@ class Pokemon {
             }
 
             document.querySelector('#subtipo' + id).innerHTML = li;
-            
         }).catch(function (error) {
             console.log('Error de captura: ' + error.message);
         });
@@ -113,27 +99,6 @@ class Pokemon {
             if(response.ok) { return response.json(); } 
             else { throw 'Error de URL o respuesta.'; }
         }).then(function(json) {
-//            console.log("Imagen");
-//            console.log(json.sprites.front_default);
-//            console.log();
-//            console.log("Nombre");
-//            console.log(json.name);
-//            console.log();
-//            console.log("Tipo o especies");
-//            console.log(json.types);
-//            console.log(json.species.name);
-//            console.log();
-//            console.log("Peso");
-//            console.log(json.weight);
-//            console.log();
-//            console.log("Habilidades");
-//            console.log(json.abilities);
-//            console.log();
-//            console.log("Experiencia base o Puntos base");
-//            console.log(json.base_experience);
-//            console.log(json.stats[0].base_stat);
-//            console.log();
-            
             let pokemon = "";
             
             pokemon = `
@@ -162,7 +127,6 @@ class Pokemon {
 
             Pokemon.detallar(id, json.types, json.abilities);
             _detalles.innerHTML = pokemon;
-            
         }).catch(function (error) {
             console.log('Error de captura: ' + error.message);
         }); 
@@ -170,26 +134,22 @@ class Pokemon {
     static
     detallar(id, tipos, habilidades) {
         setTimeout(function() {
-            let li = "", lii = "";
+            let l = "", ll = "";
 
             for(let i in tipos) {
-                li += "<li>" + tipos[i].type.name + "</li>";
+                l += "<li>" + tipos[i].type.name + "</li>";
             }
 
-            document.querySelector('#tipo' + id).innerHTML = li;
+            document.querySelector('#tipo' + id).innerHTML = l;
             
             setTimeout(function() {
-                for(let i in habilidades) { //console.log(habilidades[i].ability.name);
-                    lii += "<li>" + habilidades[i].ability.name + "</li>";     
+                for(let i in habilidades) {
+                    ll += "<li>" + habilidades[i].ability.name + "</li>";     
                 }
                 
-                document.querySelector('#habilidad' + id).innerHTML = lii;
+                document.querySelector('#habilidad' + id).innerHTML = ll;
             }, 100);
         }, 100);    
-    }
-    static
-    cerrerDetalles() {
-        Pokemon.lanzar(_detalles);
     }
     static
     colocarBusqueda() {
@@ -199,24 +159,21 @@ class Pokemon {
             _buscar = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1126";
         }
 
-        fetch(_buscar).then(function(response) { //console.log(response);
-//            statusText: "OK"
+        fetch(_buscar).then(function(response) { 
             if(response.ok) { return response.json(); } 
             else { throw 'Error de URL o respuesta.'; }
-        }).then(function(json) {  //console.log(json);
-            if(json.res === 0) {
+        }).then(function(json) {
+            let objeto = json;
+            
+            if(objeto.res === 0) {
                 res.innerHTML = "";
             } else {
-                const objeto = json;
-                _obtener = "";
-
-                let valor = buscar.value;
+                _obtener    = "";
+                let valor   = buscar.value;
 
                 for(let i in objeto.results) { 
                     if(objeto.results[i].name.substr(0, valor.length).toUpperCase() === valor.toUpperCase()) { 
                         let id = objeto.results[i].url.split("/");
-    //                    Pokemon.obtener(id, objeto.results[i]);
-    //                    Pokemon.obtenerBusqueda(id, objeto.results[i]);
                         _obtener += `
                             <div class='pokemon'>
                                 <div>
@@ -235,13 +192,11 @@ class Pokemon {
                         `;
 
                         Pokemon.subTiposDeBusqueda(id[6]);
-
                     }
                 }
             
                 Pokemon.salidaDeBusqueda();
             }
-//            Pokemon.salida();
         }).catch(function (error) {
             console.log('Error de captura: ' + error.message);
         });
@@ -270,7 +225,6 @@ class Pokemon {
     static
     salidaDeBusqueda() {
         if(_obtener !== "") { res.innerHTML = _obtener; } else { res.innerHTML = `<strong>No ha resultados...</strong>`; }
-//        if(_obtener === "") { res.innerHTML = `<strong>No ha resultados...</strong>`; }
     }
     static
     subTiposDeBusqueda(id) {
@@ -299,20 +253,19 @@ class Pokemon {
     }
     static
     desplazarse() {
-    //    let des = Number(document.body.clientHeight - 611);
-        let des = Number(document.body.clientHeight - 614);
-
-    //    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        let des = Number(document.body.clientHeight - 630);
+        let footer = document.querySelector("footer");
+        
         if (document.body.scrollTop > des || document.documentElement.scrollTop > des) {
-
             nueveMas = nueveMas + MAS;
             Pokemon.colocar(nueveMas);
         } 
-//        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-//            logo.style.height = "100px";
-//        } else {
-//            logo.style.height = "200px";
-//        }
+        
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            footer.style.display = "block";
+        } else {
+            footer.style.display = "none";
+        }
     }
 }
 
@@ -339,6 +292,7 @@ busqueda.onsubmit = function(evento) {
 window.onscroll = function () { 
     Pokemon.desplazarse();
 };
+
 
 
 

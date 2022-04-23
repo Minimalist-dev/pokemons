@@ -12,15 +12,14 @@ html {
 body { 
     color: #4d4d4d !important;
     font-size: 100% !important;
-    font: 0.80em 'Roboto', sans-serif !important;
-    line-height: 1em;
+    font-family: "Verdana", Helvetica, Tahoma, sans-serif;
     margin: 0 !important;
 }
 
 :root {
-    --n-fuente-1:   'Oswald', sans-serif;
-    --n-fuente-2:   'Roboto', sans-serif;
-    /*--n-fuente-3:            "Lucida Console", Courier, monospace;*/
+    --n-fuente-1:           "Georgia", Garamond, serif;
+    --n-fuente-2:           "Verdana", Helvetica, Tahoma, sans-serif;
+    --n-fuente-3:           "Lucida Console", Courier, monospace;
     
     --n-color-0:            transparent;
     --n-color-1:            #ffffff;
@@ -88,16 +87,7 @@ body {
     
     --n-sombra-1: inset 0 -2em 2em var(--n-color-2-1), 0em 0em 0em 0.2em var(--n-color-1), 0.1em 0.1em 0.5em var(--n-color-2-3);
     --n-sombra-2: inset 0 -2em 2em var(--n-color-1), 0em 0em 0em 0.2em var(--n-color-2), 0.1em 0.1em 0.5em var(--n-color-2-3);
-    --n-sombra-3: inset 0 -2em 2em var(--n-color-1), 0em 0em 0em 0.2em var(--n-color-1), 0.1em 0.2em 0.5em var(--n-color-2);
-    
-    --n-sombra-de-texto-1:  -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    --n-sombra-de-texto-2:  -1px 0 #8a8a8a, 0 1px #8a8a8a, 1px 0 #8a8a8a, 0 -1px #8a8a8a;
-    --n-sombra-de-texto-3:  -1px 0 #b9935a, 0 1px #b9935a, 1px 0 #b9935a, 0 -1px #b9935a;
-    /*--n-sombra-de-texto-verde:  -1px 0 #457725, 0 1px #457725, 1px 0 #457725, 0 -1px #457725;*/
-    --n-sombra-de-texto-6:  -1px 0 #dc5856, 0 1px #dc5856, 1px 0 #dc5856, 0 -1px #dc5856;
-    
-    
-   
+    --n-sombra-3: inset 0 -2em 2em var(--n-color-1), 0em 0em 0em 0.2em var(--n-color-1), 0.1em 0.2em 0.5em var(--n-color-2); 
 }
 
 /* Estilo global
@@ -108,11 +98,7 @@ h3,
 h4, 
 h5, 
 h6 { 
-    font-family: var(--n-fuente-1); 
-}
-.color_uno { color: var(--n-color-3) !important; }
-.no_romper {
-    white-space: nowrap !important;
+    font-family: var(--n-fuente-2); 
 }
 a { text-decoration: none; outline: none; }
 a, 
@@ -126,7 +112,7 @@ label,
 button,
 input[type="submit"],
 input[type="button"] {
-    font-family: var(--n-fuente-1);
+    font-family: var(--n-fuente-2);
     font-weight: bold;
 }
 button,
@@ -136,36 +122,4 @@ select {
     border: none;
     outline: none; 
 }
-input:disabled,
-input:read-only { 
-    /*cursor: not-allowed;*/ 
-}
-
-/* Resolución no acta
---------------------------------------------------------------------------------*/
-.no-acta { display: none; }
-
-@media screen and (max-width: 319px) { 
-    .n-grid { display: none !important; } 
-    .no-acta {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        
-        color: var(--n-color-4);
-        font-size: 6vw;
-        text-align: center;
-    }
-    .no-acta > i {
-        color: var(--n-color-6);
-        font-size: 12vw;
-    }
-    .no-acta > h3 {
-        color: var(--n-color-6);
-    }
-}
-
-
 

@@ -1,0 +1,31 @@
+/* 
+    Created on : 23 abr. 2022, 2:55:12 a. m.
+    Author     : neury-dev
+*/
+/* maquetado
+--------------------------------------------------------------------------------*/
+@media screen and (max-width: 550px) and (min-width: 400px) { 
+    header,
+    main,
+    .pokemon,
+    footer {
+        font-size: 0.70em;
+    }
+    
+    #detalles > section {
+        font-size: 0.50em;
+    }
+}    
+@media screen and (max-width: 399px) and (min-width: 0px) { 
+    header,
+    main,
+    .pokemon,
+    footer {
+        font-size: 0.50em;
+    }
+    
+    #detalles > section {
+        font-size: 0.30em;
+    }
+}   
+
