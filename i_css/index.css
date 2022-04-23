@@ -221,3 +221,14 @@ footer > a > i.up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
+
+/* Extra
+--------------------------------------------------------------------------------*/
+#pokeball {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30em;
+    height: 30em;
+    margin: auto;
+}
