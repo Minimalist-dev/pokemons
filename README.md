@@ -45,7 +45,7 @@ index.html
   - static detallar() {}
     - El metodo DETALLAR tiene la misma finalidad que el metodo SUBTIPOS, pero este se utilizar con la solicitud del metodo DETALLES y obtiene mas datos de la API.
   - static colocarBusqueda() {}
-    - El metodo COLOCARBUSQUEDA solicita y reemplaza la visualización del metodo COLOCAR y viceverza. En este metodo reutiliza todos los metodos que utiliza el metodo COLOR con la excesión del metodo DESPLAZARSE. 
+    - El metodo COLOCARBUSQUEDA solicita y reemplaza la visualización del metodo COLOCAR y viceverza. Este metodo reutiliza todos los metodos que utiliza el metodo COLOCAR con la excesión del metodo DESPLAZARSE el cual no es necesario en este caso. 
   - static desplazarse() {}
     - El metodo DESPLAZARSE reutiliza el metodo COLOCAR pasandole un parametro de autoincremento para solicitar mas resultados o Pokemons. 
 
