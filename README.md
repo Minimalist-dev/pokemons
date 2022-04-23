@@ -41,7 +41,7 @@ index.html
   - static subTipos() {}
     - El metodo SUBTIPOS es utilizado para solicitar los datos restantes que serán cargados por defecto, los cuales se encuentran separados de la API principal y que tiene que ser solicitados por numero o ID que identifica al Pokemon en especifico. Se carga de manera asincronica, o sea de forma automatica despues de realizada la solicitud del Pokemon.
   - static detalles() {}
-    
+    - El metodo DETALLES tiene el mismo comportamiento que el metodo COLOCAR, con la diferencia de que este solicita de manera singular según el ID del Pokemon y se visualiza en un modal separado.
   - static detallar() {}
   - static colocarBusqueda() {}
   - static desplazarse() {}
