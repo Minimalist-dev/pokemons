@@ -27,26 +27,26 @@ index.html
 ## Clases y objetos
 
 
-- class Pokemon
-  - constructor() {}
+- **class Pokemon**
+  - **constructor() {}**
     - El CONSTRUCTOR tiene la parte que se inicializa al ejecutar la aplicación, esto evita errores en los argoritmos de (estilo y logica), y asigna valores predeterminados. 
-  - static lanzar() {}
+  - **static lanzar() {}**
     - El metodo LANZAR es reutilizado para abrir y cerrar cualquier modal de la SPA, con solo unas pocas lineas y aprueba de errores.
-  - static colocar() {}
+  - **static colocar() {}**
     - El metodo COLOCAR se utiliza para solicitar los Pokemons, y retutilizado para autocargar mas según el comportamiento del (scroll). Este metodo esta separado del motodo BUSCAR debido a la falta de cosistencia y relaciones, además de estrategia para una SPA "progresiva o con margen de crecimiento y mejora", incluido la reutilización de codigo. 
-  - static obtener() {}
+  - **static obtener() {}**
     - El metodo OBTENER es para pintar los datos en la vista o interfaz, además de ser reutilizado para el autocargado según el (scroll) y la funcionaliza de busqueda.
-  - static salida() {}
+  - **static salida() {}**
     - El metodo SALIDA se utiliza en conjunto al de OBTENER, pero en este caso se utiliza para controlar o regular las diferentes resultados arrojados por la API, en la solicitud predeterminada, autocargado según el (scroll) y los resultados de busqueda.
-  - static subTipos() {}
+  - **static subTipos() {}**
     - El metodo SUBTIPOS es utilizado para solicitar los datos restantes que serán cargados por defecto además de reutilizarse para autocargado (scroll) y de busqueda, los cuales se encuentran separados de la API principal y que tiene que ser solicitados por numero o ID que identifica al Pokemon en especifico. Se carga de manera asincronica, o sea de forma automatica despues de realizada la solicitud del Pokemon.
-  - static detalles() {}
+  - **static detalles() {}**
     - El metodo DETALLES tiene el mismo comportamiento que el metodo COLOCAR, con la diferencia de que este solicita de manera singular según el ID del Pokemon y se visualiza en un modal separado.
-  - static detallar() {}
+  - **static detallar() {}**
     - El metodo DETALLAR tiene la misma finalidad que el metodo SUBTIPOS, pero este se utilizar con la solicitud del metodo DETALLES y obtiene mas datos de la API.
-  - static colocarBusqueda() {}
+  - **static colocarBusqueda() {}**
     - El metodo COLOCARBUSQUEDA solicita y reemplaza la visualización del metodo COLOCAR y viceverza. Este metodo reutiliza todos los metodos que utiliza el metodo COLOCAR con la excesión del metodo DESPLAZARSE el cual no es necesario en este caso. 
-  - static desplazarse() {}
+  - **static desplazarse() {}**
     - El metodo DESPLAZARSE reutiliza el metodo COLOCAR pasandole un parametro de autoincremento para solicitar mas resultados o Pokemons. 
 
 
