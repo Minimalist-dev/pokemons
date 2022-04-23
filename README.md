@@ -33,6 +33,7 @@ index.html
   - static lanzar() {}
     - El metodo LANZAR es reutilizado para abrir y cerrar cualquier modal de la SPA, con solo unas pocas lineas y aprueba de errores.
   - static colocar() {}
+    - El metodo COLOCAR se utiliza para solicitar los Pokemons, y retutilizado para autocargar mas según el comportamiento del (scroll). Este metodo esta separado del motodo BUSCAR debido a la falta de cosistencia y relaciones, además de estrategia para una SPA "progresiva o con margen de crecimiento y mejora", incluido la reutilización de codigo. 
   - static obtener() {}
   - static salida() {}
   - static subTipos() {}
