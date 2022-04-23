@@ -39,10 +39,11 @@ index.html
   - static salida() {}
     - El metodo SALIDA se utiliza en conjunto al de OBTENER, pero en este caso se utiliza para controlar o regular las diferentes resultados arrojados por la API, en la solicitud predeterminada, autocargado según el (scroll) y los resultados de busqueda.
   - static subTipos() {}
-    - El metodo SUBTIPOS es utilizado para solicitar los datos restantes que serán cargados por defecto, los cuales se encuentran separados de la API principal y que tiene que ser solicitados por numero o ID que identifica al Pokemon en especifico. Se carga de manera asincronica, o sea de forma automatica despues de realizada la solicitud del Pokemon.
+    - El metodo SUBTIPOS es utilizado para solicitar los datos restantes que serán cargados por defecto además de reutilizarse para autocargado (scroll) y de busqueda, los cuales se encuentran separados de la API principal y que tiene que ser solicitados por numero o ID que identifica al Pokemon en especifico. Se carga de manera asincronica, o sea de forma automatica despues de realizada la solicitud del Pokemon.
   - static detalles() {}
     - El metodo DETALLES tiene el mismo comportamiento que el metodo COLOCAR, con la diferencia de que este solicita de manera singular según el ID del Pokemon y se visualiza en un modal separado.
   - static detallar() {}
+    - El metodo DETALLAR tiene la misma finalidad que el metodo SUBTIPOS, pero este se utilizar con la solicitud del metodo DETALLES y obtiene mas datos de la API.
   - static colocarBusqueda() {}
   - static desplazarse() {}
 
