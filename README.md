@@ -1,6 +1,6 @@
 # Pokemons
 
-# Ficheros
+## Ficheros
 Las carpetas que inician con la letra "i" se refieren a la parte de la vista (interfaz) de la SPA. la carpeta "i_css" contiene los archivos de estilo (.css), mientras que la carpeta "i_iconos" contiene los iconos utilizados para visualizar el logo, decoral y adaptar el diseño a la tematica de la SPA.
 
 En las carpetas que comienzan con la letra "l" se refieren a la parte de controladores, o sea de la dinamica de la vista o dinamica de funcionalidad de la SPA. Dentro de la carpeta aparesen dos archivos de los cuales solo se utilizan uno a la vez, los cuales se pueden usar según la preferencia del interezado.
@@ -24,7 +24,7 @@ En cuanto a la carpeta que comienza con la letra "s" se refieren a la parte del 
 
 index.html
 
-# Clases y objetos
+## Clases y objetos
 
 
 - class Pokemon
