@@ -29,7 +29,7 @@ index.html
 ## Clases y objetos
 
 
-- **class Pokemon** [Ver clase](https://github.com/Minimalist-dev/pokemons/blob/master/l/l/index_bem.js)
+- **class Pokemon** ![Ver clase](https://github.com/Minimalist-dev/pokemons/blob/master/l/l/index_bem.js)
   - **constructor() {}**
     - El CONSTRUCTOR tiene la parte que se inicializa al ejecutar la aplicación, esto evita errores en los argoritmos de (estilo y logica), y asigna valores predeterminados. 
   - **static lanzar() {}**
