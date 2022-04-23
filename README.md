@@ -37,9 +37,11 @@ index.html
   - static obtener() {}
     - El metodo OBTENER es para pintar los datos en la vista o interfaz, además de ser reutilizado para el autocargado según el (scroll) y la funcionaliza de busqueda.
   - static salida() {}
-    - El metod SALIDA se utiliza en conjunto al de OBTENER, pero en este caso se utiliza para controlar o regular las diferentes resultados arrojados por la API, en la solicitud predeterminada, autocargado según el (scroll) y los resultados de busqueda.
+    - El metodo SALIDA se utiliza en conjunto al de OBTENER, pero en este caso se utiliza para controlar o regular las diferentes resultados arrojados por la API, en la solicitud predeterminada, autocargado según el (scroll) y los resultados de busqueda.
   - static subTipos() {}
+    - El metodo SUBTIPOS es utilizado para solicitar los datos restantes que serán cargados por defecto, los cuales se encuentran separados de la API principal y que tiene que ser solicitados por numero o ID que identifica al Pokemon en especifico. Se carga de manera asincronica, o sea de forma automatica despues de realizada la solicitud del Pokemon.
   - static detalles() {}
+    
   - static detallar() {}
   - static colocarBusqueda() {}
   - static desplazarse() {}
