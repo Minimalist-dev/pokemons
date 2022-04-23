@@ -21,5 +21,25 @@ En cuanto a la carpeta que comienzan con la letra "s" se refieren a la parte del
     - index_bem.js
 - s/
   vacio.json
+
 index.html
+
+# Clases y objetos
+
+
+- class Pokemon
+  - constructor() {}
+    - El CONSTRUCTOR tiene la parte que se inicializa al ejecutar la aplicación, esto evita errores en los argoritmos de (estilo y logica), y asigna valores predeterminados. 
+  - static lanzar() {}
+    - El metodo LANZAR es reutilizado para abrir y cerrar cualquier modal de la SPA, con solo unas pocas lineas y aprueba de errores.
+  - static colocar() {}
+  - static obtener() {}
+  - static salida() {}
+  - static subTipos() {}
+  - static detalles() {}
+  - static detallar() {}
+  - static colocarBusqueda() {}
+  - static desplazarse() {}
+
+
 
