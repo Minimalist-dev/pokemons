@@ -50,5 +50,5 @@ index.html
     - El metodo DESPLAZARSE reutiliza el metodo COLOCAR pasandole un parametro de autoincremento para solicitar mas resultados o Pokemons. 
 
 ## Notas
-Para probar o saber como funciona o que comportamiento tiene la SPA, que no se alla explicado aquí pueden abrir el enlace siguiente ![Abrir](https://minimalist-dev.github.io/pokemons/) 
+Para probar o saber como funciona o que comportamiento tiene la SPA, que no se alla explicado aquí pueden abrir el enlace siguiente [Abrir](https://minimalist-dev.github.io/pokemons/).
 
