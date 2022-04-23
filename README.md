@@ -45,6 +45,7 @@ index.html
   - static detallar() {}
     - El metodo DETALLAR tiene la misma finalidad que el metodo SUBTIPOS, pero este se utilizar con la solicitud del metodo DETALLES y obtiene mas datos de la API.
   - static colocarBusqueda() {}
+    - El metodo COLOCARBUSQUEDA solicita y reemplaza la visualización del metodo COLOCAR y viceverza. En este metodo reutiliza todos los metodos que utiliza el metodo COLOR con la excesión del metodo DESPLAZARSE. 
   - static desplazarse() {}
 
 
